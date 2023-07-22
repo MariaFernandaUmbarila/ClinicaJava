@@ -12,3 +12,13 @@ El presente proyecto está hecho en Kotlin y corresponde al desarrollo de la act
 + SpringBoot: 3.1.2
 + PostgreSQL: última versión traída desde Docker
 + Gradle: 8.2.1
++ Colección de Postman: versión 2.1
+
+**Nombre de la base de datos**: clinica_java
+
+---
+
+## Pasos para ejecutar el proyecto en máquina local
+
+1. Ejecutar el comando `docker compose up` a la base de datos de PostgreSQL que se encuentra en el archivo `postgresdb.txt`
+2. En IntelliJ IDEA ejecutar ClinicaJavaApplication, verificar que ninguna otra aplicación esté ocupando el puerto 8080 usado por el servicio.
