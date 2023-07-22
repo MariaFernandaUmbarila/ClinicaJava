@@ -8,6 +8,7 @@ const val ApiV1 = "/api/v1"
 
 //Rutas para doctores
 const val Doctor = "$ApiV1/doctores"
+const val GetAllDoctors = "$Doctor/get-all"
 const val CreateDoctor = "$Doctor/create"
 const val GetDoctorById = "$Doctor/{id}"
 const val UpdateDoctor = "$Doctor/{id}"
