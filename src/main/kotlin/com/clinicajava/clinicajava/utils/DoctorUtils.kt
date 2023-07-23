@@ -1,36 +1,47 @@
 package com.clinicajava.clinicajava.utils
 import com.clinicajava.clinicajava.domains.entities.Doctor
-import com.clinicajava.clinicajava.domains.responses.CreateDoctorResponse
+import com.clinicajava.clinicajava.domains.responses.DoctorDeleteResponse
+import com.clinicajava.clinicajava.domains.responses.DoctorResponse
 
 class DoctorUtils {
 
     //Función de mapping para el modelo de listas que usa el servicio y el que usa el repository de GetAllDoctors
-    fun mapDoctorEntityList(doctorEntities:List<Doctor>):List<CreateDoctorResponse>{
+    fun mapDoctorEntityList(doctorEntities:List<Doctor>):List<DoctorResponse>{
         return doctorEntities.map {
-            doctorEntity -> CreateDoctorResponse(
-                doct_id = doctorEntity.doct_id,
-                doct_nombre = doctorEntity.doct_nombre,
-                doct_apellido = doctorEntity.doct_apellido,
-                doct_consultorio = doctorEntity.doct_consultorio,
-                doct_especialidad = doctorEntity.doct_especialidad,
-                doct_correo = doctorEntity.doct_correo,
-                doct_createdAt = doctorEntity.doct_createdAt,
-                doct_updatedAt = doctorEntity.doct_updatedAt
+            doctorEntity -> DoctorResponse(
+                doctId = doctorEntity.doct_id,
+                doctNombre = doctorEntity.doct_nombre,
+                doctApellido = doctorEntity.doct_apellido,
+                doctConsultorio = doctorEntity.doct_consultorio,
+                doctEspecialidad = doctorEntity.doct_especialidad,
+                doctCorreo = doctorEntity.doct_correo,
+                doctCreatedat = doctorEntity.doct_createdAt,
+                doctUpdatedat = doctorEntity.doct_updatedAt
             )
         }
     }
 
     //Función de mapping para el modelo que usa el servicio y el que usa el repository de GetAllDoctors
-    fun mapDoctorEntity(doctorEntity:Doctor):CreateDoctorResponse{
-        return CreateDoctorResponse(
-            doct_id = doctorEntity.doct_id,
-            doct_nombre = doctorEntity.doct_nombre,
-            doct_apellido = doctorEntity.doct_apellido,
-            doct_consultorio = doctorEntity.doct_consultorio,
-            doct_especialidad = doctorEntity.doct_especialidad,
-            doct_correo = doctorEntity.doct_correo,
-            doct_createdAt = doctorEntity.doct_createdAt,
-            doct_updatedAt = doctorEntity.doct_updatedAt
+    fun mapDoctorEntity(doctorEntity:Doctor):DoctorResponse{
+        return DoctorResponse(
+            doctId = doctorEntity.doct_id,
+            doctNombre = doctorEntity.doct_nombre,
+            doctApellido = doctorEntity.doct_apellido,
+            doctConsultorio = doctorEntity.doct_consultorio,
+            doctEspecialidad = doctorEntity.doct_especialidad,
+            doctCorreo = doctorEntity.doct_correo,
+            doctCreatedat = doctorEntity.doct_createdAt,
+            doctUpdatedat = doctorEntity.doct_updatedAt
+        )
+    }
+
+    //Función de mapping para el modelo que usa el servicio y el que retorna el repository para DeteleDoctorById
+    fun mapDoctorDelete(doctorEntity:Doctor, rows:Long):DoctorDeleteResponse{
+        return DoctorDeleteResponse(
+            rowsDeleted = rows,
+            doctId = doctorEntity.doct_id,
+            doctNombre = doctorEntity.doct_nombre,
+            doctApellido = doctorEntity.doct_apellido
         )
     }
 }
