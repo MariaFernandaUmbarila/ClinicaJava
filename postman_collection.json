@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"doct_id\": 16,\r\n    \"doct_nombre\": \"Alison\",\r\n    \"doct_apellido\": \"Carreño\", \r\n    \"doct_especialidad\": \"Medicina general\",\r\n    \"doct_consultorio\": \"404\",\r\n    \"doct_correo\": \"rsalazar@gmail.com\"\r\n}",
+							"raw": "{\r\n    \"doct_id\": 22,\r\n    \"doct_nombre\": \"Alison\",\r\n    \"doct_apellido\": \"Carreño\", \r\n    \"doct_especialidad\": \"Medicina general\",\r\n    \"doct_consultorio\": \"404\",\r\n    \"doct_correo\": \"rsalazar@gmail.com\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -70,16 +70,221 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Obtener lista de doctores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/clinicajava/api/v1/doctores/list_all",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clinicajava",
+								"api",
+								"v1",
+								"doctores",
+								"list_all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener doctor por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/clinicajava/api/v1/doctores/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clinicajava",
+								"api",
+								"v1",
+								"doctores",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar doctor por id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/clinicajava/api/v1/doctores/delete/10",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clinicajava",
+								"api",
+								"v1",
+								"doctores",
+								"delete",
+								"10"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
 		{
-			"name": "Obtener lista de doctores",
+			"name": "Pacientes",
+			"item": [
+				{
+					"name": "Obtener lista de pacientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/clinicajava/api/v1/pacientes/list_all",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clinicajava",
+								"api",
+								"v1",
+								"pacientes",
+								"list_all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener paciente por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/clinicajava/api/v1/pacientes/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clinicajava",
+								"api",
+								"v1",
+								"pacientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener paciente por id Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/clinicajava/api/v1/pacientes/delete/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clinicajava",
+								"api",
+								"v1",
+								"pacientes",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear paciente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"paci_id\": 3,\r\n    \"paci_nombre\": \"Myriam\",\r\n    \"paci_apellido\": \"Prada\",\r\n    \"paci_identif\": \"1547999863\",\r\n    \"paci_telefono\": 302587963\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/clinicajava/api/v1/pacientes/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clinicajava",
+								"api",
+								"v1",
+								"pacientes",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar paciente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"paci_nombre\": \"Johana\",\r\n    \"paci_telefono\": 302587963\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/clinicajava/api/v1/pacientes/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clinicajava",
+								"api",
+								"v1",
+								"pacientes",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Citas",
+			"item": []
+		},
+		{
+			"name": "Obtener lista de citas",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/clinicajava/api/v1/doctores/list_all",
+					"raw": "localhost:8080/clinicajava/api/v1/citas/list_all",
 					"host": [
 						"localhost"
 					],
@@ -88,53 +293,8 @@
 						"clinicajava",
 						"api",
 						"v1",
-						"doctores",
+						"citas",
 						"list_all"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Obtener doctor por id",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "localhost:8080/clinicajava/api/v1/doctores/3",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"clinicajava",
-						"api",
-						"v1",
-						"doctores",
-						"3"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Eliminar doctor por id",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "localhost:8080/clinicajava/api/v1/doctores/delete/10",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"clinicajava",
-						"api",
-						"v1",
-						"doctores",
-						"delete",
-						"10"
 					]
 				}
 			},

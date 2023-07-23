@@ -3,7 +3,7 @@ package com.clinicajava.clinicajava.constants
 /*Se definen las rutas a usar para cada componente y cada enpoint.
 * Estas constantes son importadas y usadas desde los controladores*/
 
-const val HEALTH_CHECK = "/health-check"
+const val HEALTH_CHECK = "/health_check"
 const val ApiV1 = "/api/v1"
 
 //Rutas para doctores
@@ -21,3 +21,11 @@ const val CreatePatient = "$Patient/create"
 const val GetPatientById = "$Patient/{id}"
 const val DeletePatientById = "$Patient/delete/{id}"
 const val UpdatePatient = "$Patient/{id}"
+
+//Rutas para citas
+const val Appointment = "$ApiV1/citas"
+const val GetAllAppointments = "$Appointment/list_all"
+const val CreateAppointment = "$Appointment/create"
+const val GetAppointmentById = "$Appointment/{id}"
+const val DeleteAppointmentById = "$Appointment/delete/{id}"
+const val UpdateAppointment = "$Appointment/{id}"
