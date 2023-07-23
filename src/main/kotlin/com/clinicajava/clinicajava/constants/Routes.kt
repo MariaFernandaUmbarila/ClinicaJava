@@ -13,3 +13,11 @@ const val CreateDoctor = "$Doctor/create"
 const val GetDoctorById = "$Doctor/{id}"
 const val DeleteDoctorById = "$Doctor/delete/{id}"
 const val UpdateDoctor = "$Doctor/{id}"
+
+//Rutas para pacientes
+const val Patient = "$ApiV1/pacientes"
+const val GetAllPatients = "$Patient/list_all"
+const val CreatePatient = "$Patient/create"
+const val GetPatientById = "$Patient/{id}"
+const val DeletePatientById = "$Patient/delete/{id}"
+const val UpdatePatient = "$Patient/{id}"

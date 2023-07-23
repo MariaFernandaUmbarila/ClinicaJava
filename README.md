@@ -27,8 +27,8 @@ El presente proyecto está hecho en Kotlin y corresponde al desarrollo de la act
 
 # Tareas y mejoras realizadas
 
-- [ ] **Terminar el crud de doctoresm, citas y pacientes**. Se finalizó con el CRUD completo de citas y pacientes, como se puede comprobar al probar los endpoints en Postman y al mirar el archivo `src/main/kotlin/com/clinicajava/clinicajava/constants/Routes.kt`. Los endpoints hacen conexión a base de datos desde el repositorio, pasando por el service y luego a los controladores.
+- [ ] **Terminar el crud de doctores, citas y pacientes**. Se finalizó con el CRUD completo de citas y pacientes, como se puede comprobar al probar los endpoints en Postman y al mirar el archivo `src/main/kotlin/com/clinicajava/clinicajava/constants/Routes.kt`. Los endpoints hacen conexión a base de datos desde el repositorio, pasando por el service y luego a los controladores.
 
 # Mejoras pendientes
 
-- [ ] Validar respuestas vacías en cada componente.
+- [ ] Validar las excepciones y respuestas vacías o nulas en cada componente.

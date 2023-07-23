@@ -9,14 +9,14 @@ class DoctorUtils {
     fun mapDoctorEntityList(doctorEntities:List<Doctor>):List<DoctorResponse>{
         return doctorEntities.map {
             doctorEntity -> DoctorResponse(
-                doctId = doctorEntity.doct_id,
-                doctNombre = doctorEntity.doct_nombre,
-                doctApellido = doctorEntity.doct_apellido,
-                doctConsultorio = doctorEntity.doct_consultorio,
-                doctEspecialidad = doctorEntity.doct_especialidad,
-                doctCorreo = doctorEntity.doct_correo,
-                doctCreatedat = doctorEntity.doct_createdAt,
-                doctUpdatedat = doctorEntity.doct_updatedAt
+                doctId = doctorEntity.doctId,
+                doctNombre = doctorEntity.doctNombre,
+                doctApellido = doctorEntity.doctApellido,
+                doctConsultorio = doctorEntity.doctConsultorio,
+                doctEspecialidad = doctorEntity.doctEspecialidad,
+                doctCorreo = doctorEntity.doctCorreo,
+                doctCreatedat = doctorEntity.doctCreatedat,
+                doctUpdatedat = doctorEntity.doctUpdatedat
             )
         }
     }
@@ -24,14 +24,14 @@ class DoctorUtils {
     //Función de mapping para el modelo que usa el servicio y el que usa el repository de GetAllDoctors
     fun mapDoctorEntity(doctorEntity:Doctor):DoctorResponse{
         return DoctorResponse(
-            doctId = doctorEntity.doct_id,
-            doctNombre = doctorEntity.doct_nombre,
-            doctApellido = doctorEntity.doct_apellido,
-            doctConsultorio = doctorEntity.doct_consultorio,
-            doctEspecialidad = doctorEntity.doct_especialidad,
-            doctCorreo = doctorEntity.doct_correo,
-            doctCreatedat = doctorEntity.doct_createdAt,
-            doctUpdatedat = doctorEntity.doct_updatedAt
+            doctId = doctorEntity.doctId,
+            doctNombre = doctorEntity.doctNombre,
+            doctApellido = doctorEntity.doctApellido,
+            doctConsultorio = doctorEntity.doctConsultorio,
+            doctEspecialidad = doctorEntity.doctEspecialidad,
+            doctCorreo = doctorEntity.doctCorreo,
+            doctCreatedat = doctorEntity.doctCreatedat,
+            doctUpdatedat = doctorEntity.doctUpdatedat
         )
     }
 
@@ -39,9 +39,9 @@ class DoctorUtils {
     fun mapDoctorDelete(doctorEntity:Doctor, rows:Long):DoctorDeleteResponse{
         return DoctorDeleteResponse(
             rowsDeleted = rows,
-            doctId = doctorEntity.doct_id,
-            doctNombre = doctorEntity.doct_nombre,
-            doctApellido = doctorEntity.doct_apellido
+            doctId = doctorEntity.doctId,
+            doctNombre = doctorEntity.doctNombre,
+            doctApellido = doctorEntity.doctApellido
         )
     }
 }

@@ -31,13 +31,14 @@ class DoctorController {
     @PostMapping(CreateDoctor)
     fun createDoctor(@RequestBody request: DoctorRequest):DoctorResponse = doctorService.createDoctor(request)
 
+    @PutMapping(UpdateDoctor)
+    fun updateDoctorById(@RequestBody request: DoctorRequest, @PathVariable("id") id: Long):DoctorResponse{
+        return doctorService.updateDoctorById(request, id)
+    }
+
     @DeleteMapping(DeleteDoctorById)
     fun deleteDoctorById(@PathVariable("id") id: Long): DoctorDeleteResponse {
         return doctorService.deleteDoctorById(id)
     }
 
-    @PutMapping(UpdateDoctor)
-    fun updateDoctorById(@RequestBody request: DoctorRequest, @PathVariable("id") id: Long):DoctorResponse{
-        return doctorService.updateDoctorById(request, id)
-    }
 }
