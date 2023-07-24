@@ -21,7 +21,7 @@ class DoctorController {
     }
 
     @GetMapping(GetDoctorById)
-    fun getDoctorById(@PathVariable("id") id: Long): DoctorResponse{
+    fun getDoctorById(@PathVariable("id") id: Long): DoctorResponse {
         return doctorService.getDoctorById(id)
     }
 
@@ -29,10 +29,10 @@ class DoctorController {
     del @ResquestBody define de qué tipo será la petición. Por último, se llama al servicio y se le
     pasa como parámetro el request */
     @PostMapping(CreateDoctor)
-    fun createDoctor(@RequestBody request: DoctorRequest):DoctorResponse = doctorService.createDoctor(request)
+    fun createDoctor(@RequestBody request: DoctorRequest): DoctorResponse = doctorService.createDoctor(request)
 
     @PutMapping(UpdateDoctor)
-    fun updateDoctorById(@RequestBody request: DoctorRequest, @PathVariable("id") id: Long):DoctorResponse{
+    fun updateDoctorById(@RequestBody request: DoctorRequest, @PathVariable("id") id: Long): DoctorResponse {
         return doctorService.updateDoctorById(request, id)
     }
 

@@ -24,12 +24,12 @@ class DoctorService {
         return utils.mapDoctorEntityList(doctRepoResponse)
     }
 
-    fun getDoctorById(id:Long):DoctorResponse{
+    fun getDoctorById(id:Long): DoctorResponse {
         val doctRepoResponse:Doctor = doctorRepository.getDoctorById(id)
         return utils.mapDoctorEntity(doctRepoResponse)
     }
 
-    fun createDoctor(request:DoctorRequest):DoctorResponse{
+    fun createDoctor(request:DoctorRequest): DoctorResponse {
         doctorRepository.createDoctor(request, Instant.now())
         try {
             val isCreatedResponse = doctorRepository.getDoctorById(request.doctId)
@@ -39,7 +39,7 @@ class DoctorService {
         }
     }
 
-    fun updateDoctorById(request: DoctorRequest?, id:Long):DoctorResponse{
+    fun updateDoctorById(request: DoctorRequest?, id:Long): DoctorResponse {
         doctorRepository.updateDoctorById(request, Instant.now(), id)
         val doctRepoResponse:Doctor = doctorRepository.getDoctorById(id)
         return utils.mapDoctorEntity(doctRepoResponse)

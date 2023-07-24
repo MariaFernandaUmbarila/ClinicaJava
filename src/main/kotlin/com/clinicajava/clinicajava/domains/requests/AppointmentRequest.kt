@@ -1,5 +1,4 @@
 package com.clinicajava.clinicajava.domains.requests
-import java.time.Instant
 
 data class AppointmentRequest (
     val citaId:Long,
@@ -7,7 +6,5 @@ data class AppointmentRequest (
     val citaEspecialidad:String,
     val citaDoctId:Long,
     val citaPaciIdentif:String,
-    val citaConsultorio:Long,
-    val citaCreatedAt:Instant,
-    val updatedAt:Instant
+    val citaConsultorio:Long
 )

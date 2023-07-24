@@ -8,7 +8,7 @@ import java.time.Instant
 class PatientUtils {
 
     //Función de mapping desde la entidad hacia la respuesta establecida
-    fun mapPatientEntity(patientEntity:Patient):PatientResponse{
+    fun mapPatientEntity(patientEntity:Patient): PatientResponse {
         return PatientResponse(
             paciId = patientEntity.paciId,
             paciNombre = patientEntity.paciNombre,
@@ -33,7 +33,8 @@ class PatientUtils {
         )
     }
 
-    fun mapDeleteResponse(patientEntity: Patient, rows:Long):PatientDeleteResponse{
+    //Funcipon de mapping para el paciente eliminado
+    fun mapDeleteResponse(patientEntity: Patient, rows:Long): PatientDeleteResponse {
         return PatientDeleteResponse(
             rowsDeleted = rows,
             paciNombre = patientEntity.paciNombre,

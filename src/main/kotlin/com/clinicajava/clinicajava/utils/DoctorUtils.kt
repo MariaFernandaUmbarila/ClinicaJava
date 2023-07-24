@@ -22,7 +22,7 @@ class DoctorUtils {
     }
 
     //Función de mapping para el modelo que usa el servicio y el que usa el repository de GetAllDoctors
-    fun mapDoctorEntity(doctorEntity:Doctor):DoctorResponse{
+    fun mapDoctorEntity(doctorEntity:Doctor): DoctorResponse {
         return DoctorResponse(
             doctId = doctorEntity.doctId,
             doctNombre = doctorEntity.doctNombre,
@@ -36,7 +36,7 @@ class DoctorUtils {
     }
 
     //Función de mapping para el modelo que usa el servicio y el que retorna el repository para DeteleDoctorById
-    fun mapDoctorDelete(doctorEntity:Doctor, rows:Long):DoctorDeleteResponse{
+    fun mapDoctorDelete(doctorEntity:Doctor, rows:Long): DoctorDeleteResponse {
         return DoctorDeleteResponse(
             rowsDeleted = rows,
             doctId = doctorEntity.doctId,

@@ -22,6 +22,9 @@ open class Appointment (
     @Column(name="cita_consultorio")
     open var citaConsultorio: Long,
 
+    @Column(name="cita_especialidad")
+    open var citaEspecialidad: String,
+
     @Column(name="cita_created_at")
     open var citaCreatedAt: Instant = Instant.now(),
 

@@ -188,7 +188,7 @@
 					"response": []
 				},
 				{
-					"name": "Obtener paciente por id Copy",
+					"name": "Eliminar paciente",
 					"request": {
 						"method": "DELETE",
 						"header": [],
@@ -276,29 +276,106 @@
 		},
 		{
 			"name": "Citas",
-			"item": []
-		},
-		{
-			"name": "Obtener lista de citas",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "localhost:8080/clinicajava/api/v1/citas/list_all",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"clinicajava",
-						"api",
-						"v1",
-						"citas",
-						"list_all"
-					]
+			"item": [
+				{
+					"name": "Obtener cita por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/clinicajava/api/v1/citas/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clinicajava",
+								"api",
+								"v1",
+								"citas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener lista de citas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/clinicajava/api/v1/citas/list_all",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clinicajava",
+								"api",
+								"v1",
+								"citas",
+								"list_all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener lista de citas Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cita_id\": 2,\r\n    \"cita_horario\": \"9:50\",\r\n    \"cita_especialidad\": \"Pediatría\",\r\n    \"cita_doct_id\": 2,\r\n    \"cita_paci_identif\": \"1547889863\",\r\n    \"cita_consultorio\": 501\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/clinicajava/api/v1/citas/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clinicajava",
+								"api",
+								"v1",
+								"citas",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar cita",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/clinicajava/api/v1/citas/delete/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clinicajava",
+								"api",
+								"v1",
+								"citas",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		}
 	]
 }
